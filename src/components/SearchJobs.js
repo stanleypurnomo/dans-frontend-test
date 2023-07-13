@@ -16,14 +16,10 @@ function SearchJobs() {
     const [wasLastList, setWasLastList] = useState(false);
     const listInnerRef = useRef();
     const searchJobs = async () => {
-        if(jobDesc && jobLoc){
-            axios.get('http://dev3.dansmultipro.co.id/api/recruitment/positions.json?description='+jobDesc+'&location='+jobLoc+'&full_time='+fullTime).then((response) => {
-                setJobList(response.data)
-                setSearchState(true)
-            });
-        } else {
-            alert('Please fill required fields')
-        }
+        axios.get('http://dev3.dansmultipro.co.id/api/recruitment/positions.json?description='+jobDesc+'&location='+jobLoc+'&full_time='+fullTime).then((response) => {
+            setJobList(response.data)
+            setSearchState(true)
+        });
     }
 
     const fetchDataScroll = async () => {
