@@ -1,3 +1,7 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: hidden;
+}
 .App {
   text-align: center;
 }
@@ -5,6 +9,20 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.vertical-center{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.underline-grey{
+  height: 1px;
+  background: #ccc;
+  margin-bottom: 1em;
 }
 
 @media (prefers-reduced-motion: no-preference) {
